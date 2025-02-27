@@ -59,12 +59,10 @@ def linspace(start, end, elements = 0, precision = -1): # returns a list of line
 def lininc(start, end, increment): # Creates a list of numbers between start and end with a difference of increment between each number i.e. when the input is expressed in scientific notation, this function returns the power that 10 is raised to
     li = []
     roundfactor = abs(ordmag(increment))
-    print(roundfactor)
     element = start
     while element <= end:
         li.append(element)
         element += increment
-        # print(ordmag(element))
         element = round(element, roundfactor)
     return li
 
